@@ -16,7 +16,7 @@ public class Main {
                 if(input.equals("e")){
                     Encryptor.encrypt(scanner);
                 }
-                else if(input.equals("d")){
+                else{
                     Encryptor.decrypt(scanner);
                 }
             }
