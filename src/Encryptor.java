@@ -122,4 +122,36 @@ public class Encryptor {
         System.out.println("file created...bitch.");
 
     }
+
+    public  static void decrypt(Scanner scanner) {
+        System.out.println("Enter your message here: ");
+        String encryptedMessage = scanner.nextLine();
+        scanner.nextLine();
+        Message message = new Message(encryptedMessage);
+//        message.setMessageId();
+        System.out.println("Enter the key cipher: ");
+        String keyCipher = scanner.nextLine();
+        String decryptedMessage = "";
+
+//        decrpt========
+        for (int i = 0; i < encryptedMessage.length(); i++){
+            System.out.println("Decrypting....");
+            char characterInMessage = encryptedMessage.charAt(i);
+            System.out.println("character in message is: "+ characterInMessage);
+
+            int indexOfKeyChar = keyCipher.indexOf(characterInMessage);
+            System.out.println("the index of "+ characterInMessage+" in the key cipher is is "+ indexOfKeyChar);
+
+            char charInMasterList = characterList.charAt(indexOfKeyChar);
+            System.out.println(charInMasterList);
+
+            StringBuilder builder = new StringBuilder(decryptedMessage);
+            builder.append(charInMasterList);
+            decryptedMessage = builder.toString();
+        }
+        System.out.println("Decrypted message generated!");
+        System.out.println(decryptedMessage);
+
+
+    }
 }
