@@ -10,7 +10,7 @@ public class Encryptor {
     String keyInput = "";
     Key key;
     Scanner scanner;
-    static final String characterList= "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!?@#$%^&*()_+|/,.;:-"+" ";
+    static final String characterList= "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!?@#$%^&*()_+|/,.;:-<>[]{}`~"+" ";
     static char[] characterArray = characterList.toCharArray();
 
     public static void encrypt(Scanner scanner) {

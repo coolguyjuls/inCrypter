@@ -21,5 +21,6 @@ public class Main {
                 }
             }
         }while(!check);
+        scanner.close();
     }
 }
